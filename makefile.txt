@@ -1,0 +1,12 @@
+all: prog
+
+prog: course.o temp_c.o
+	gcc -o prog course.o temp_c.o
+kyrs.o: kyrs.c temp_h.h
+	gcc -c -o course.o course.c
+temp_c.o: temp_c.c 
+	gcc -c -o temp_c.o temp_c.c
+
+clean: 
+	del *.o
+	del prog.exe
